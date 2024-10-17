@@ -1,1 +1,8 @@
-
+export const handler = async (event) => {
+    const name = event.name || 'IPSpecialist'; // Use straight quotes
+    const message = Welcome to ${name}!;
+    return {
+        statusCode: 200,
+        body: JSON.stringify({ message }),
+    };
+};
